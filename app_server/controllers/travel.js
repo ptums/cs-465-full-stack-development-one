@@ -6,8 +6,6 @@ const Trip = require("../models/travlr");
 
 const getTrips = async () => {
   const data = await Trip.find({});
-  console.log("data", data);
-
   return data;
 };
 
