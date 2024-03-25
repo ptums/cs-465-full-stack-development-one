@@ -15,42 +15,14 @@
 					<div>
 						<div id="news" class="body">
 							<div class="sidebar">
-								<h3>Latest News</h3>
-								<ul>
-									<li>
-										<a href="news.html">2023 Best Beaches Contest Winners</a>
-									</li>
-									<li>
-										<a href="news.html">Top 10 Diving Spots</a>
-									</li>
-									<li>
-										<a href="news.html">Fishing ban to be implemented this year</a>
-									</li>
-									<li>
-										<a href="news.html">Lifeguard saves child from drowning</a>
-									</li>
-								</ul>
-								<h3>Vaction Tips</h3>
-								<ul>
-									<li>
-										<a href="news.html">What to bring on the beach?</a>
-									</li>
-									<li>
-										<a href="news.html">Planning Fun Activities</a>
-									</li>
-									<li>
-										<a href="news.html">Diving Checklist</a>
-									</li>
-									<li>
-										<a href="news.html">First Aid</a>
-									</li>
-									<li>
-										<a href="news.html">How to Build a Sand Castle?</a>
-									</li>
-									<li>
-										<a href="news.html">Tanning Tips</a>
-									</li>
-								</ul>
+								{{#each pageNews}}
+									<h3>{{this.label}}</h3>
+									<ul>
+										{{#each this.articles}}
+											<li><a href="news.html">{{this}}</a></li>
+										{{/each}}
+									</ul>
+								{{/each}}
 							</div>
 							<div>
 								<h1>News</h1>
