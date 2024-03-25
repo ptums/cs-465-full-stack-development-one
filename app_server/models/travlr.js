@@ -11,4 +11,31 @@ const tripSchema = new mongoose.Schema({
   description: { type: String, required: true },
 });
 const Trip = mongoose.model("trips", tripSchema);
-module.exports = Trip;
+
+const blogsSchema = new mongoose.Schema({
+  code: { type: String, required: true, index: true },
+  title: { type: String, required: true, index: true },
+  date: { type: String, required: true },
+  excerpt: { type: String, required: true },
+});
+
+const Blog = mongoose.model("blogs", blogsSchema);
+
+const foodsSchema = new mongoose.Schema({
+  code: { type: String, required: true, index: true },
+  name: { type: String, required: true, index: true },
+  image: { type: String, required: true },
+  description: { type: String, required: true },
+});
+const Food = mongoose.model("foods", foodsSchema);
+
+const roomsSchema = new mongoose.Schema({
+  code: { type: String, required: true, index: true },
+  room: { type: String, required: true, index: true },
+  rate: { type: String, required: true },
+  image: { type: String, required: true },
+  description: { type: String, required: true },
+});
+const Room = mongoose.model("rooms", roomsSchema);
+
+module.exports = { Trip, Blog, Food, Room };
